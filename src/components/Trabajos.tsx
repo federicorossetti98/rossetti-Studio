@@ -1,17 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-import { proyectos, servicios, type Categoria } from "@/content/site";
+import { portadaDe, proyectos, servicios, type Categoria } from "@/content/site";
 import { Media } from "./Media";
 import { Reveal } from "./Reveal";
 
 const filtros: ("Todo" | Categoria)[] = ["Todo", ...servicios.map((s) => s.nombre)];
-
-const aspecto = {
-  horizontal: "aspect-[4/3]",
-  vertical: "aspect-[4/5]",
-  cuadrado: "aspect-square",
-};
 
 export function Trabajos() {
   const [filtro, setFiltro] = useState<(typeof filtros)[number]>("Todo");
@@ -40,18 +35,25 @@ export function Trabajos() {
 
       <ul className="grid grid-cols-1 gap-x-6 gap-y-14 md:grid-cols-2">
         {lista.map((p, i) => (
-          <li key={`${filtro}-${p.titulo}`} className={i % 2 === 1 ? "md:mt-24" : ""}>
-            <Reveal media delay={(i % 2) * 80}>
-              <div className={`relative overflow-hidden ${aspecto[p.formato ?? "horizontal"]}`}>
-                <Media imagen={p.imagen} video={p.video} alt={`${p.titulo} para ${p.cliente}`} etiqueta={p.categoria} />
+          <li key={`${filtro}-${p.slug}`} className={i % 2 === 1 ? "md:mt-24" : ""}>
+            <Link href={`/trabajos/${p.slug}`} className="group block">
+              <Reveal media delay={(i % 2) * 80}>
+                <div className="relative aspect-[4/5] overflow-hidden bg-tile">
+                  <div className="h-full w-full transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]">
+                    <Media pieza={portadaDe(p.slug)} alt={`${p.titulo} para ${p.cliente}`} />
+                  </div>
+                </div>
+              </Reveal>
+              <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-3 text-sm">
+                <span className="font-medium">
+                  {p.cliente} <span className="text-muted">— {p.titulo}</span>
+                </span>
+                <span className="shrink-0 text-muted">
+                  {p.categoria}
+                  {p.año ? ` · ${p.año}` : ""}
+                </span>
               </div>
-            </Reveal>
-            <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-3 text-sm">
-              <span className="font-medium">{p.titulo}</span>
-              <span className="text-muted">
-                {p.cliente} · {p.categoria} · {p.año}
-              </span>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>

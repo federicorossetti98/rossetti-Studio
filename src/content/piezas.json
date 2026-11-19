@@ -1,0 +1,406 @@
+{
+  "munoz-marchesi-audiovisual": [
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/01.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/01.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/02.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/02.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/03.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/03.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/04.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/04.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/05.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/05.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/06.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/06.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/07.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/07.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/08.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/08.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/munoz-marchesi-audiovisual/09.mp4",
+      "poster": "/trabajos/munoz-marchesi-audiovisual/09.webp",
+      "ancho": 608,
+      "alto": 1080
+    }
+  ],
+  "munoz-marchesi-fotografia": [
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/01.webp",
+      "ancho": 960,
+      "alto": 1280
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/02.webp",
+      "ancho": 1600,
+      "alto": 1067
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/03.webp",
+      "ancho": 960,
+      "alto": 1280
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/04.webp",
+      "ancho": 1200,
+      "alto": 1599
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/05.webp",
+      "ancho": 1600,
+      "alto": 901
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/06.webp",
+      "ancho": 1067,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/07.webp",
+      "ancho": 960,
+      "alto": 1280
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/08.webp",
+      "ancho": 1200,
+      "alto": 1599
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/09.webp",
+      "ancho": 1067,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/10.webp",
+      "ancho": 960,
+      "alto": 1280
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/11.webp",
+      "ancho": 1067,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/12.webp",
+      "ancho": 1200,
+      "alto": 1599
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/13.webp",
+      "ancho": 1280,
+      "alto": 960
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/14.webp",
+      "ancho": 960,
+      "alto": 1280
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/15.webp",
+      "ancho": 1200,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-fotografia/16.webp",
+      "ancho": 1200,
+      "alto": 1599
+    }
+  ],
+  "munoz-marchesi-identidad": [
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/01.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/02.webp",
+      "ancho": 1600,
+      "alto": 1168
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/03.webp",
+      "ancho": 1063,
+      "alto": 591
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/04.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/05.webp",
+      "ancho": 1135,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/06.webp",
+      "ancho": 1080,
+      "alto": 1080
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-identidad/07.webp",
+      "ancho": 1600,
+      "alto": 1600
+    }
+  ],
+  "munoz-marchesi-campanas": [
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/01.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/02.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/03.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/04.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/05.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/06.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/07.webp",
+      "ancho": 1080,
+      "alto": 1350
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/08.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/09.webp",
+      "ancho": 1600,
+      "alto": 264
+    }
+  ],
+  "clinica-san-gabriel-identidad": [
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-identidad/01.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-identidad/02.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-identidad/03.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-identidad/04.webp",
+      "ancho": 1600,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-identidad/05.webp",
+      "ancho": 1600,
+      "alto": 1600
+    }
+  ],
+  "clinica-san-gabriel-campanas": [
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/01.webp",
+      "ancho": 1280,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/02.webp",
+      "ancho": 1080,
+      "alto": 1350
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/03.webp",
+      "ancho": 1280,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/04.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/05.webp",
+      "ancho": 1280,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/06.webp",
+      "ancho": 900,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/07.webp",
+      "ancho": 1135,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/08.webp",
+      "ancho": 1280,
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/clinica-san-gabriel-campanas/09.webp",
+      "ancho": 1280,
+      "alto": 1600
+    }
+  ],
+  "clinica-san-gabriel-audiovisual": [
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/01.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/01.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/02.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/02.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/03.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/03.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/04.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/04.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/05.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/05.webp",
+      "ancho": 608,
+      "alto": 1080
+    },
+    {
+      "tipo": "video",
+      "src": "/trabajos/clinica-san-gabriel-audiovisual/06.mp4",
+      "poster": "/trabajos/clinica-san-gabriel-audiovisual/06.webp",
+      "ancho": 608,
+      "alto": 1080
+    }
+  ],
+  "mauro-passarino": [
+    {
+      "tipo": "video",
+      "src": "/trabajos/mauro-passarino/01.mp4",
+      "poster": "/trabajos/mauro-passarino/01.webp",
+      "ancho": 1080,
+      "alto": 608
+    }
+  ]
+}

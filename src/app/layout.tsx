@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter_Tight, Instrument_Serif } from "next/font/google";
 import { estudio } from "@/content/site";
+import { Encabezado, Pie } from "@/components/Encabezado";
 import "./globals.css";
 
 const interTight = Inter_Tight({
@@ -33,7 +34,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" className={`${interTight.variable} ${instrumentSerif.variable} antialiased`}>
-      <body className="min-h-dvh bg-paper font-sans text-ink">{children}</body>
+      <body className="min-h-dvh bg-paper font-sans text-ink">
+        <Encabezado />
+        {children}
+        <Pie />
+      </body>
     </html>
   );
 }
