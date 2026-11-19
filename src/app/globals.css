@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #f4f2ee;
+  --color-ink: #141413;
+  --color-muted: #6f6c66;
+  --color-line: #d9d5cd;
+  --color-tile: #e6e2da;
+
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Entrada al hacer scroll: solo opacity + transform. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 700ms var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Imágenes que se descubren de abajo hacia arriba. */
+.reveal-media {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1100ms var(--ease-in-out);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal-media[data-visible="true"] {
+  clip-path: inset(0 0 0 0);
+}
+
+.press {
+  transition: transform 160ms var(--ease-out);
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .reveal,
+  .reveal[data-visible="true"] {
+    transform: none;
+    transition: opacity 300ms ease;
+  }
+  .reveal-media {
+    clip-path: none;
+    transition: none;
+  }
 }
