@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { portadaDe, type Proyecto } from "@/content/site";
+import { Reveal } from "./Reveal";
 
 // Grilla de trabajos dibujada con WebGL.
 //
@@ -156,6 +157,12 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
   useEffect(() => {
     const capa = capaRef.current;
     if (!capa) return;
+
+    // En pantallas táctiles no se usa WebGL: el scroll nativo del celular corre
+    // por su cuenta y el canvas lo sigue con un cuadro de atraso, lo que se ve
+    // como un temblor borroso; además la lente difumina casi toda la portada.
+    // Ahí quedan las imágenes HTML, con la misma entrada que el resto del sitio.
+    if (window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
 
     // Un canvas nuevo en cada montaje: en desarrollo React monta dos veces, y un
     // canvas cuyo contexto ya se liberó no vuelve a dibujar.
@@ -461,15 +468,18 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
                   }}
                   className="relative aspect-[4/5] overflow-hidden bg-tile"
                 >
-                  {/* Respaldo HTML: se ve solo si no hay WebGL. */}
+                  {/* Respaldo HTML (celulares y navegadores sin WebGL), con la
+                      misma entrada de abajo hacia arriba que el resto del sitio. */}
                   {foto && (
-                    <Image
-                      src={foto}
-                      alt={`${p.titulo} para ${p.cliente}`}
-                      fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className="gl-respaldo object-cover"
-                    />
+                    <Reveal media delay={(i % 2) * 80} className="gl-respaldo absolute inset-0">
+                      <Image
+                        src={foto}
+                        alt={`${p.titulo} para ${p.cliente}`}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </Reveal>
                   )}
                   {/* Etiqueta esmerilada: va por encima del canvas y lo desenfoca. */}
                   <span className="entrada entrada-etiqueta absolute top-2 left-2 z-[2] flex gap-3 rounded-[4px] bg-ink/40 px-2 pt-1.5 pb-1 text-xs font-medium text-paper backdrop-blur-md">
