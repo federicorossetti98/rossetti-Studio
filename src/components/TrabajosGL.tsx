@@ -481,8 +481,8 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
                       />
                     </Reveal>
                   )}
-                  {/* Etiqueta esmerilada: va por encima del canvas y lo desenfoca. */}
-                  <span className="entrada entrada-etiqueta absolute top-2 left-2 z-[2] flex gap-3 rounded-[4px] bg-ink/40 px-2 pt-1.5 pb-1 text-xs font-medium text-paper backdrop-blur-md">
+                  {/* Etiqueta: va por encima del canvas, con fondo sólido (sin desenfoque). */}
+                  <span className="entrada entrada-etiqueta absolute top-2 left-2 z-[2] flex gap-3 rounded-[4px] bg-ink/75 px-2 pt-1.5 pb-1 text-xs font-medium text-paper">
                     <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                     <span>{p.categoria}</span>
                   </span>

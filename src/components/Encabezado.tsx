@@ -11,7 +11,7 @@ const nav = [
 
 export function Encabezado() {
   return (
-    <header className="sticky top-0 z-20 border-b border-line/70 bg-paper/85 backdrop-blur-md">
+    <header className="sticky top-0 z-20 border-b border-line/70 bg-paper">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-4 md:px-10">
         <Link href="/" aria-label="Inicio">
           <Image src={estudio.logo} alt={estudio.nombre} width={1582} height={384} className="h-9 w-auto" priority />
