@@ -58,7 +58,7 @@ export default function Home() {
               <li key={s.nombre} className="border-b border-line">
                 <Reveal className="grid gap-4 py-8 md:grid-cols-12 md:gap-6 md:py-10">
                   <span className="text-sm text-muted tabular-nums md:col-span-1">0{i + 1}</span>
-                  <h3 className="font-serif text-4xl md:col-span-4 md:text-5xl">{s.nombre}</h3>
+                  <h3 className="font-sans text-4xl font-bold tracking-[-0.03em] md:col-span-4 md:text-5xl">{s.nombre}</h3>
                   <p className="text-lg leading-relaxed md:col-span-4">{s.detalle}</p>
                   <ul className="text-sm leading-7 text-muted md:col-span-3">
                     {s.incluye.map((x) => (
