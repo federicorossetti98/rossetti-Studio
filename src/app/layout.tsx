@@ -17,6 +17,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  // Dirección pública de la web. Si se conecta un dominio propio, cambiarla acá.
+  metadataBase: new URL("https://rossetti-studio.vercel.app"),
   title: `${estudio.nombre} — Diseño, Audiovisual, Fotografía y Publicidad`,
   description: estudio.descripcion,
   openGraph: {
