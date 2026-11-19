@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { portadaDe, type Proyecto } from "@/content/site";
+import { Clip } from "./Clip";
 import { Reveal } from "./Reveal";
 
 // Grilla de trabajos dibujada con WebGL.
@@ -14,7 +15,8 @@ import { Reveal } from "./Reveal";
 //   · una entrada que descubre la portada de abajo hacia arriba, y después
 //     la etiqueta y los textos de abajo,
 //   · un paralaje: la imagen se desliza un poco dentro de su marco al scrollear,
-//   · un zoom suave y el video del proyecto al pasar el mouse,
+//   · el video del proyecto en bucle mientras la portada está en pantalla,
+//   · un zoom suave al pasar el mouse,
 //   · una "lente de cristal" en los bordes de la pantalla, que curva y separa
 //     en colores las portadas al entrar y salir del encuadre.
 // Si el navegador no tiene WebGL, se ven las imágenes HTML de siempre.
@@ -376,7 +378,7 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
           (tile.mat.uniforms.uCubrir.value as THREE.Vector2).set(ta > pa ? pa / ta : 1, ta > pa ? 1 : ta / pa);
         }
 
-        // Hover: zoom suave y, si el proyecto tiene video, el video.
+        // Hover: zoom suave.
         const esta = hover.current === slug;
         tile.encima += ((esta ? 1 : 0) - tile.encima) * suave(6);
         // Zoom base de 1.06 para dejar margen al paralaje.
@@ -386,7 +388,9 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
         const centro = r.top + r.height / 2;
         tile.mat.uniforms.uParalaje.value = reducir ? 0 : (centro - H / 2) / (H / 2 + r.height / 2);
 
-        const conVideo = esta && !reducir && !!tile.videoSrc;
+        // Video: se reproduce solo mientras la portada está en pantalla (ya
+        // empezada la entrada). Fuera de pantalla se pausa (más arriba).
+        const conVideo = !reducir && !!tile.videoSrc && tile.revelar > 0.3;
         if (conVideo) {
           arrancarVideo(tile);
           if (tile.video?.paused) tile.video.play().catch(() => {});
@@ -445,6 +449,7 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
       <ul className="grid grid-cols-1 gap-x-6 gap-y-14 md:grid-cols-2">
         {proyectos.map((p, i) => {
           const foto = urlFoto(p.slug);
+          const video = urlVideo(p.slug);
           return (
             <li key={p.slug} className={i % 2 === 1 ? "md:mt-24" : ""}>
               <Link
@@ -472,13 +477,17 @@ export function TrabajosGL({ proyectos }: { proyectos: Proyecto[] }) {
                       misma entrada de abajo hacia arriba que el resto del sitio. */}
                   {foto && (
                     <Reveal media delay={(i % 2) * 80} className="gl-respaldo absolute inset-0">
-                      <Image
-                        src={foto}
-                        alt={`${p.titulo} para ${p.cliente}`}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover"
-                      />
+                      {video ? (
+                        <Clip src={video} poster={foto} label={`${p.titulo} para ${p.cliente}`} soloSinGL />
+                      ) : (
+                        <Image
+                          src={foto}
+                          alt={`${p.titulo} para ${p.cliente}`}
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
+                        />
+                      )}
                     </Reveal>
                   )}
                   {/* Etiqueta: va por encima del canvas, con fondo sólido (sin desenfoque). */}

@@ -7,11 +7,14 @@ type Props = {
   poster?: string;
   label: string;
   className?: string;
+  // Para el respaldo de la grilla WebGL: no se reproduce si el canvas ya está
+  // dibujando la portada (evita decodificar el mismo video dos veces).
+  soloSinGL?: boolean;
 };
 
 // Video corto, sin sonido, en bucle. Solo se reproduce mientras está en pantalla
 // y nunca si la persona pidió reducir el movimiento.
-export function Clip({ src, poster, label, className = "" }: Props) {
+export function Clip({ src, poster, label, className = "", soloSinGL = false }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -20,7 +23,8 @@ export function Clip({ src, poster, label, className = "" }: Props) {
     const reducir = window.matchMedia("(prefers-reduced-motion: reduce)");
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !reducir.matches) {
+        const glDibuja = soloSinGL && document.documentElement.dataset.gl === "on";
+        if (entry.isIntersecting && !reducir.matches && !glDibuja) {
           video.play().catch(() => {});
         } else {
           video.pause();
@@ -30,7 +34,7 @@ export function Clip({ src, poster, label, className = "" }: Props) {
     );
     io.observe(video);
     return () => io.disconnect();
-  }, []);
+  }, [soloSinGL]);
 
   return (
     <video
