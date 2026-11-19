@@ -50,6 +50,32 @@ html {
   clip-path: inset(0 0 0 0);
 }
 
+/* Grilla de trabajos: con WebGL activo, las portadas las dibuja el canvas. */
+[data-gl="on"] .gl-respaldo {
+  visibility: hidden;
+}
+
+/* Etiqueta y textos de cada portada: entran después de que se descubre la
+   imagen. Solo se ocultan si WebGL está activo (si no, nadie los mostraría). */
+[data-gl="on"] .entrada {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 900ms var(--ease-out);
+}
+[data-gl="on"] .entrada-etiqueta {
+  transform: translateY(-6px);
+  transition-delay: calc(var(--retraso, 0ms) + 420ms);
+}
+[data-gl="on"] .entrada-pie {
+  transition-delay: calc(var(--retraso, 0ms) + 220ms);
+}
+[data-gl="on"] [data-entrada="on"] .entrada {
+  opacity: 1;
+  transform: none;
+}
+
 .press {
   transition: transform 160ms var(--ease-out);
 }
@@ -69,5 +95,10 @@ html {
   .reveal-media {
     clip-path: none;
     transition: none;
+  }
+  [data-gl="on"] .entrada {
+    transform: none;
+    transition: opacity 300ms ease;
+    transition-delay: 0ms;
   }
 }

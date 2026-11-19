@@ -2,6 +2,7 @@ import Image from "next/image";
 import { estudio, servicios } from "@/content/site";
 import { Clip } from "@/components/Clip";
 import { Reveal } from "@/components/Reveal";
+import { Revuelto } from "@/components/Revuelto";
 import { Trabajos } from "@/components/Trabajos";
 
 export default function Home() {
@@ -51,7 +52,10 @@ export default function Home() {
         <section id="trabajos" className="mx-auto max-w-[1400px] scroll-mt-20 px-4 pt-32 md:px-10">
           <div className="mb-8 flex items-end justify-between gap-6">
             <h2 className="text-[clamp(2rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.03em]">
-              Trabajos <em className="font-serif font-normal">seleccionados</em>
+              <Revuelto texto="Trabajos" />{" "}
+              <em className="font-serif font-normal">
+                <Revuelto texto="seleccionados" retraso={120} />
+              </em>
             </h2>
           </div>
           <Trabajos />
