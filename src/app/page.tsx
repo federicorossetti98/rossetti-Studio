@@ -36,6 +36,15 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <Reveal media delay={470} className="mt-2 md:mt-6">
+            <div className="relative aspect-video overflow-hidden bg-tile">
+              <Clip
+                src={estudio.reelHorizontal}
+                poster={estudio.reelHorizontal.replace(/\.mp4$/, ".webp")}
+                label="Fragmento del video para YouTube de Mauro Passarino"
+              />
+            </div>
+          </Reveal>
         </section>
 
         {/* Trabajos */}

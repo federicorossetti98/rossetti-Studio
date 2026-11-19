@@ -210,56 +210,68 @@
     {
       "tipo": "imagen",
       "src": "/trabajos/munoz-marchesi-campanas/01.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/02.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/03.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/04.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/05.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/06.webp",
-      "ancho": 900,
-      "alto": 1600
-    },
-    {
-      "tipo": "imagen",
-      "src": "/trabajos/munoz-marchesi-campanas/07.webp",
       "ancho": 1080,
       "alto": 1350
     },
     {
       "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/02.webp",
+      "ancho": 1080,
+      "alto": 1080
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/03.webp",
+      "ancho": 1080,
+      "alto": 1350
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/04.webp",
+      "ancho": 1080,
+      "alto": 1080
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/05.webp",
+      "ancho": 1600,
+      "alto": 900
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/06.webp",
+      "ancho": 1080,
+      "alto": 1350
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/07.webp",
+      "ancho": 1080,
+      "alto": 1080
+    },
+    {
+      "tipo": "imagen",
       "src": "/trabajos/munoz-marchesi-campanas/08.webp",
-      "ancho": 900,
-      "alto": 1600
+      "ancho": 1080,
+      "alto": 1350
     },
     {
       "tipo": "imagen",
       "src": "/trabajos/munoz-marchesi-campanas/09.webp",
+      "ancho": 1080,
+      "alto": 1080
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/10.webp",
       "ancho": 1600,
-      "alto": 264
+      "alto": 1600
+    },
+    {
+      "tipo": "imagen",
+      "src": "/trabajos/munoz-marchesi-campanas/11.webp",
+      "ancho": 1600,
+      "alto": 900
     }
   ],
   "clinica-san-gabriel-identidad": [

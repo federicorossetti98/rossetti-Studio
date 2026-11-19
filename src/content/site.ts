@@ -41,6 +41,8 @@ export const estudio = {
     "/trabajos/clinica-san-gabriel-audiovisual/03.mp4",
     "/trabajos/munoz-marchesi-audiovisual/03.mp4",
   ],
+  // Clip horizontal que va debajo de los tres verticales, a todo el ancho.
+  reelHorizontal: "/trabajos/mauro-passarino/01.mp4",
   instagram: {
     usuario: "@rossetti.studio",
     url: "https://www.instagram.com/rossetti.studio/",
@@ -116,7 +118,8 @@ export const proyectos: Proyecto[] = [
     cliente: "Muñoz Marchesi Motos",
     año: "2026",
     categoria: "Publicidad",
-    resumen: "Placas de financiación, lanzamientos y sorteos con un sistema gráfico reconocible.",
+    resumen:
+      "Placas de financiación para CFMoto y Triumph, adaptadas a cada formato con un sistema gráfico reconocible.",
   },
   {
     slug: "munoz-marchesi-identidad",
