@@ -22,13 +22,14 @@ export const estudio = {
   lema: "Diseño, imagen y movimiento para marcas que quieren ser recordadas.",
   descripcion:
     "Estudio creativo de diseño, audiovisual, fotografía y publicidad. Cada proyecto empieza por entender la marca y termina en piezas que se ven, se sienten y funcionan.",
+  ubicacion: "Resistencia, Chaco · Argentina",
   // Archivo en /public. Si no existe todavía, se muestra el nombre en texto.
-  logo: "",
+  logo: "/marca/logotipo.png",
   // Video de presentación (showreel) en /public, por ejemplo "/reel.mp4".
   reel: "",
   instagram: {
-    usuario: "@rossettistudio",
-    url: "https://instagram.com/",
+    usuario: "@rossetti.studio",
+    url: "https://www.instagram.com/rossetti.studio/",
   },
   otrasRedes: [] as { nombre: string; url: string }[],
 };

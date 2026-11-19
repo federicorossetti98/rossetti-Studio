@@ -13,7 +13,7 @@ const nav = [
 
 function Logo() {
   if (estudio.logo) {
-    return <Image src={estudio.logo} alt={estudio.nombre} width={140} height={32} className="h-7 w-auto" priority />;
+    return <Image src={estudio.logo} alt={estudio.nombre} width={1582} height={384} className="h-9 w-auto" priority />;
   }
   return <span className="text-[15px] font-semibold tracking-tight">{estudio.nombre}</span>;
 }
@@ -39,7 +39,7 @@ export default function Home() {
             rel="noreferrer"
             className="press rounded-full bg-ink px-4 py-2 text-sm text-paper"
           >
-            Escríbenos
+            Escribinos
           </a>
         </div>
       </header>
@@ -49,7 +49,7 @@ export default function Home() {
         <section className="mx-auto max-w-[1400px] px-4 pt-16 pb-12 md:px-10 md:pt-28">
           <Reveal>
             <p className="mb-6 text-xs uppercase tracking-[0.18em] text-muted">
-              Diseño · Audiovisual · Fotografía · Publicidad
+              Diseño · Audiovisual · Fotografía · Publicidad — {estudio.ubicacion}
             </p>
           </Reveal>
           <Reveal delay={60}>
@@ -120,8 +120,15 @@ export default function Home() {
 
         {/* Contacto */}
         <section id="contacto" className="mx-auto max-w-[1400px] scroll-mt-20 px-4 pt-40 pb-16 md:px-10">
-          <div className="bg-ink px-6 py-16 text-paper md:px-14 md:py-24">
-            <p className="mb-6 text-xs uppercase tracking-[0.18em] text-paper/60">¿Tienes un proyecto?</p>
+          <div className="relative overflow-hidden bg-ink px-6 py-16 text-paper md:px-14 md:py-24">
+            <Image
+              src="/marca/isotipo-claro.png"
+              alt=""
+              width={900}
+              height={792}
+              className="pointer-events-none absolute -right-10 -bottom-12 w-56 opacity-10 md:right-10 md:bottom-10 md:w-80"
+            />
+            <p className="mb-6 text-xs uppercase tracking-[0.18em] text-paper/60">¿Tenés un proyecto?</p>
             <h2 className="max-w-[18ch] text-[clamp(2.2rem,6vw,5.5rem)] leading-[0.95] font-medium tracking-[-0.035em]">
               Hablemos por <em className="font-serif font-normal">Instagram.</em>
             </h2>
@@ -140,7 +147,7 @@ export default function Home() {
 
       <footer className="mx-auto flex max-w-[1400px] flex-col gap-2 px-4 pb-10 text-sm text-muted md:flex-row md:justify-between md:px-10">
         <span>
-          © 2026 {estudio.nombre}
+          © 2026 {estudio.nombre} · {estudio.ubicacion}
         </span>
         <div className="flex gap-6">
           <a href={estudio.instagram.url} target="_blank" rel="noreferrer" className="hover:text-ink">

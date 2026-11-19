@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: estudio.nombre,
     description: estudio.lema,
     type: "website",
-    locale: "es_ES",
+    locale: "es_AR",
   },
 };
 
